@@ -1,0 +1,4 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=303
+
+This is a pretty complete Ruby filetype script.
+It provides for the use of matchit.vim, as well as setting the include path correctly (by calling ruby if you have it). It also deals with the possibility of :: in identifiers, both for tags and for finding keywords.
