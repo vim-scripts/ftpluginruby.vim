@@ -1,8 +1,8 @@
 " Vim filetype plugin file
 " Language:     Ruby
 " Maintainer:   Ned Konz <ned@bike-nomad.com>
-" Last Change:  $Date: 2002/06/22 05:29:53 $
-" $Id: ruby.vim,v 1.7 2002/06/22 05:29:53 ned Exp $
+" Last Change:  $Date: 2002/08/01 18:10:44 $
+" $Id: ruby.vim,v 1.8 2002/08/01 18:10:44 ned Exp $
 " Current version is at http://bike-nomad.com/vim
 "
 " To suppress loading of this plugin, just do this
@@ -22,7 +22,7 @@ set cpo&vim
 " Set this once, globally.
 if !exists("rubypath")
   if executable("ruby")
-    if &shellxquote != '"'
+    if &shellxquote == "'"
       let rubypath = system('ruby -e "print $:.join(%q{,})"' )
     else
       let rubypath = system("ruby -e 'print $:.join(%q{,})'" )
@@ -66,4 +66,5 @@ if exists("loaded_matchit")
   endif
 endif
 " \%(\%(^\|[;=]\)\s*\)\@<=
+"
 let &cpo = s:save_cpo
